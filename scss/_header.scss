@@ -1,0 +1,107 @@
+/* HEADER */
+
+.header{
+    grid-area: header;
+    background: $color_blue;
+    background: linear-gradient(180deg, $color_blue 0%, $color_blue 95%, $color_green 100%);
+    position: sticky;
+        top: 0;
+    z-index: 3; /* Para estár incluso sobre los botones del carrusel */
+
+    /* ========================= */
+
+    /* HEADER NAVBAR */
+
+    /* Modificación a la class="container-fluid" de Bootstrap */
+    .container-fluid{
+        display: flex;
+            justify-content: center;
+
+        /* ========== */
+
+        /* Logo */
+
+        /* Modificación a la class="navbar-brand" de Bootstrap */
+        .navbar-brand{
+            margin: auto;
+
+            .logo__link--text{
+                color: white;
+                font-family: 'Prompt', sans-serif;
+                font-size: 3rem;
+                text-transform: uppercase;
+                text-shadow: 0.25rem 0.25rem 0 $color_yellow;
+                text-align: center;
+            }
+
+        }
+
+        /* ========== */
+
+        /* Botón hamburguesa */
+
+        /* Modificación a la class="navbar-toggler" de Bootstrap */
+        .navbar-toggler{
+            border-color: transparent;
+        }
+
+        /* ========== */
+
+        /* Menú y Tienda */
+
+        /* Modificación a la class="navbar-collapse" de Bootstrap */
+        .navbar-collapse{
+            justify-content: space-between;
+
+            /* ===== */
+
+            /* Menú */
+
+            .header-nav__menu{
+                background: $color_blue;
+                background: linear-gradient(90deg, $color_blue 0%, $color_red 5%, $color_red 95%, $color_blue 100%);
+                text-align: center;
+
+                .header-nav__menu--item{
+                    margin: 0px 15px;
+
+                    .header-nav__menu--item-link{
+                        /* color: white; */
+                        text-align: center;
+                        font-family: 'Yellowtail', cursive;
+                        font-size: 1.5rem;
+
+                        &:hover{
+                            background: $color_dark-red;
+                            background: linear-gradient(90deg, transparent 0%, $color_dark-red 5%, $color_dark-red 95%, transparent 100%);
+                        }
+                    }
+                }
+            }
+
+            /* ===== */
+
+            /* Tienda */
+
+            .header-nav__shop{
+                margin: 0 0 15px 0;
+                background: $color_blue;
+                background: linear-gradient(90deg, $color_blue 0%, $color_orange 5%, $color_orange 95%, $color_blue 100%);
+                text-align: center;
+
+                .header-nav__shop--item-link{
+                    /* color: #002E3A; */
+                    text-align: center;
+                    font-family: 'Yellowtail', cursive;
+                    font-size: 1.25rem;
+
+                    &:hover{
+                        /* color: white; */
+                        background: $color_dark-orange;
+                        background: linear-gradient(90deg, transparent 0%, $color_dark-orange 5%, $color_dark-orange 95%, transparent 100%);
+                    }
+                }
+            }
+        }
+    }
+}
